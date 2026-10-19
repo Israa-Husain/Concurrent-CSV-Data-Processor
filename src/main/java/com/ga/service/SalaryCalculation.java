@@ -7,7 +7,7 @@ import com.ga.model.Employee;
 import java.time.LocalDate;
 
 public class SalaryCalculation {
-    public SalaryDetails calculate(Employee employee, LocalDate calcDate, double bonus){
+    public SalaryDetails calculate(Employee employee, LocalDate calcDate){
         if(employee.getJoinedDate().isAfter(calcDate)){
             throw new IllegalArgumentException("Joining date can not be in the future");
         }
@@ -33,7 +33,7 @@ public class SalaryCalculation {
             }
 
             if(employee.getProjectCompletion()>0.8){
-                rate+=bonus;
+                rate*=1.5;
             }
         }
         double oldSalary = employee.getSalary();
