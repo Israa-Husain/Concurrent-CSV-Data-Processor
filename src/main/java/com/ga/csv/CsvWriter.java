@@ -1,6 +1,7 @@
 package com.ga.csv;
 
 import com.ga.dto.SalaryDetails;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -8,7 +9,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
-
+@Component
 public class CsvWriter {
     public void write(Path path, List<SalaryDetails> records) throws IOException{
         Files.createDirectories(path.toAbsolutePath().getParent());

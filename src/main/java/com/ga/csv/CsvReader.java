@@ -2,6 +2,7 @@ package com.ga.csv;
 
 import com.ga.model.Employee;
 import com.ga.model.EmployeeRole;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -10,7 +11,7 @@ import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class CsvReader {
     public List<Employee> read(Path path) throws IOException {
         List<Employee> employees = new ArrayList<>();
