@@ -18,7 +18,7 @@ public class SalaryCalculation {
             years--;
         }
 
-        int rate = 0;
+        double rate = 0;
         if(employee.getProjectCompletion()>=0.6){
             if(employee.getRole().name().equalsIgnoreCase("Director")){
                 rate = 5;
