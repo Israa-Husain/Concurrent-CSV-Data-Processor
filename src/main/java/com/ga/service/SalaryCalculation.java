@@ -3,9 +3,10 @@ package com.ga.service;
 
 import com.ga.dto.SalaryDetails;
 import com.ga.model.Employee;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-
+@Service
 public class SalaryCalculation {
     public SalaryDetails calculate(Employee employee, LocalDate calcDate){
         if(employee.getJoinedDate().isAfter(calcDate)){
